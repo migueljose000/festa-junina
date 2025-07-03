@@ -1,0 +1,123 @@
+ @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libertinus+Math&display=swap');
+
+body {
+ 
+  background-image: url('https://pontanegranews.com.br/wp-content/uploads/2025/06/Fogueira-de-Sao-Joao-1.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 20px;
+  color: #fff9f1;
+  text-align: center;
+  font-family: "Libertinus Math", system-ui;
+ font-size: 2rem;
+}
+h2{
+font-family: "Dancing Script", cursive;
+
+
+}
+h1{
+  font-family: "Dancing Script", cursive;
+
+}
+.entrada-container {
+  background: rgba(144, 77, 0, 0.796);
+  padding: 30px;
+  margin: 100px auto;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+input {
+  width: 80%;
+  padding: 10px;
+  margin: 15px 0;
+  font-size: 1.1em;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 12px 25px;
+  font-size: 1.1em;
+  background-color: #3b0000;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: "Dancing Script", cursive;
+}
+
+button:hover {
+  background-color: #360000;
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(4, 120px);
+  gap: 15px;
+  justify-content: center;
+  margin: 30px auto;
+}
+
+.memory-card {
+  width: 120px;
+  height: 120px;
+  perspective: 1000px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  cursor: pointer;
+}
+
+.memory-card.flip {
+  transform: rotateY(180deg);
+}
+
+.front-face, .back-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+
+.front-face {
+  transform: rotateY(180deg);
+  background: #fff;
+}
+
+.front-face img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.back-face {
+  background-color: #e67e22;
+  background-image: url('https://img.freepik.com/vetores-gratis/festa-junina_23-2148128543.jpg?semt=ais_hybrid&w=740');
+  background-size: cover;
+  border: 3px solid #c0392b;
+}
+
+#tempo {
+  font-size: 20px;
+  padding: 10px;
+  background: #000000;
+  border: 2px dashed #470000c5;
+  display: inline-block;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.top-bar {
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
